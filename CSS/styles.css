@@ -13,7 +13,6 @@ body {
 }
 
 
-
 /* ------------------- Início dos estilos do topo da página ------------------ */
 .topo-pagina{
     height: 54px;
@@ -219,22 +218,21 @@ body {
 .post p{
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 14px;
 }
 
-.post strong{
-    font-weight: 500;
-    margin: 0px 2px;
+.foto-e-perfil{
+    display: flex;
+    align-items: center;
 }
 
 
-.base-post{
+
+.post ul{
     width: 100%;
-    padding: 0px 18px 14px;
+    padding: 0px 18px;
 }
 
-.base-post li{
+.post li{
     margin-top: 8px;
     display: flex;
     align-items: center;
@@ -242,7 +240,7 @@ body {
 
 .base-post li:first-of-type{
     justify-content: space-between;
-    margin-top: 8px;
+    margin-top: 12px;
 
 }
 
@@ -253,9 +251,63 @@ body {
 .base-post img{
     height:20px;
     width: 20px;
-    margin-right: 15px;
+    margin-right: 10px;
     border-radius: 50%;
 }
+
+.comentarios{
+border-bottom: solid 1px #DBDBDB;
+}
+
+.comentarios li{
+    justify-content: space-between;
+}
+
+
+.comentarios li:last-child{
+    margin-bottom: 8px;
+}
+.comentarios ion-icon{
+    font-size: 14px; 
+}
+
+.post .adicionar-comentario{
+    display: flex;
+    justify-content: flex-start;
+    height: 40px;
+    width: 100%;
+}
+
+.adicionar-comentario ion-icon{
+    font-size: 32px;
+    color:#262626
+}
+
+.adicionar-comentario input{
+    width: 100%;
+    border: none;
+}
+
+
+.adicionar-comentario button{
+    background-color: inherit;
+    border:none;
+}
+
+.adicionar-comentario .emojis:hover{
+    filter:brightness(2);
+}
+
+.adicionar-comentario .publicar{
+    color:#B2DFFC;
+}
+
+.adicionar-comentario .publicar:hover{
+    color:#0095F6;
+}
+
+
+
 
 /* ------------------- Fim dos estilos das postagens ------------------ */
 
@@ -328,7 +380,7 @@ body {
     font-weight: 500;
 }
 
-.segue-voce{
+.texto-pequeno{
     font-size:12px;
     line-height: 14px;
     font-weight: 400;
@@ -347,6 +399,12 @@ body {
     margin-bottom: 18px;
 }
 
+
+
+/* ------------------- Fim dos estilos da lateral direita (Sidebar) ------------------ */
+
+/* ------------------- Definições de cores de texto -----------------------------------*/
+
 .preto{
     color: #262626
 }
@@ -363,7 +421,8 @@ body {
     color: #139ef2;
 }
 
-/* ------------------- Fim dos estilos da lateral direita (Sidebar) ------------------ */
+
+
 
 /* ------------------- Escondendo a base-mobile nas versões desktop ------------------ */
 
