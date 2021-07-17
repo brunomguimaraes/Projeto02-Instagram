@@ -177,24 +177,18 @@ body {
 
 .midia-do-post{
     width: 100%;
-    padding-top: 50%;
-    padding-bottom: 50%;
+    padding-bottom: 100%; /*Transforma a div em quadrada*/
     position: relative;
     box-sizing: content-box;
     background-color: teal;
 }
 
-.teste{
-    background-color: tomato;
-    width: 100%;
-    top:0;
-    bottom: 0;
-    position: absolute;
-}
-
-.midia-do-post img{
+.midia-do-post img,video{
     width: 100%;
     height: 100%;
+    left:0;
+    top: 0;
+    position: absolute;
     object-fit: cover;
 }
 
@@ -211,7 +205,7 @@ body {
     align-items: center;
 }
 
-.post > div img{ /* Topo de cada post*/
+.post > div:first-child img{ /* Topo de cada post*/
     height: 32px;
     width: 32px;
     margin-right: 15px;
@@ -236,7 +230,7 @@ body {
 }
 
 .base-post li{
-    margin-top: 5px;
+    margin-top: 8px;
     display: flex;
     align-items: center;
 }
@@ -254,7 +248,7 @@ body {
 .base-post img{
     height:20px;
     width: 20px;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 /* ------------------- Fim dos estilos das postagens ------------------ */
