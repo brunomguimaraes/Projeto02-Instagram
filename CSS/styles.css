@@ -55,19 +55,19 @@ body {
     width: 215px;
     background-color:#Fafafa;
     border: solid 1px #dbdbdb;
-    justify-content: center;
     border-radius: 3px;
+    text-align: center;
 }
 
 .caixa-pesquisa p{
     font-size: 12px;
     color: #979797;
 }
-.botoes-direita ion-icon{
+.botoes-direita a{
     margin-left: 20px;
 }
 
-.botoes-direita ion-icon:first-of-type{
+.botoes-direita a:first-of-type{
     margin-left: 0px;
 }
 
@@ -112,7 +112,7 @@ body {
     position: relative;
 }
 
-.stories div{
+.stories div,a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,6 +181,12 @@ body {
     margin-top: 24px;
 }
 
+.post button{
+    background-color: inherit;
+    border:none;
+    cursor:pointer;
+}
+
 .midia-do-post{
     width: 100%;
     padding-bottom: 100%; /*Transforma a div em quadrada*/
@@ -235,6 +241,10 @@ body {
     margin-top: 8px;
     display: flex;
     align-items: center;
+}
+
+.post a{
+    display: inline-block;
 }
 
 .base-post li:first-of-type{
@@ -293,11 +303,6 @@ border-bottom: solid 1px #DBDBDB;
 }
 
 
-.adicionar-comentario button{
-    background-color: inherit;
-    border:none;
-}
-
 .adicionar-comentario .emojis:hover{
     filter:brightness(2);
 }
@@ -340,6 +345,17 @@ border-bottom: solid 1px #DBDBDB;
     margin-right: 17px;
     border-radius: 50%;
 }
+
+.sidebar button{
+    background-color: inherit;
+    border:none;
+    cursor:pointer;
+}
+
+.sidebar a{
+    justify-content: left;
+}
+
 
 
 
@@ -410,19 +426,19 @@ border-bottom: solid 1px #DBDBDB;
 /* ------------------- Definições de cores de texto -----------------------------------*/
 
 .preto{
-    color: #262626
+    color: #262626 !important;
 }
 
 .cinza-escuro {
-    color: #8e8e8e;
+    color: #8e8e8e !important;
 }
 
 .cinza-claro{
-    color: #c7c7c7;
+    color: #c7c7c7 !important;
 }
 
 .azul{
-    color: #139ef2;
+    color: #139ef2 !important;
 }
 
 
