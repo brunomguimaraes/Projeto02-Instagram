@@ -24,20 +24,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-content: space-between;
     border-bottom: solid 1px #DBDBDB;
     z-index: 2;
+    padding: 7px calc((100% - (614px + 293px))/2 )
 }
 
 .topo-pagina div{
     display: flex;
     align-items: center;
 }
-
-.barra-logos{
-    width: calc(614px + 293px);
-    height: 40px;
-    justify-content: space-between;
- }
 
  .icon-mobile{
      display: none;
@@ -104,6 +100,7 @@ body {
     margin-top: 88px;
     height:116px;
     width: 100%;
+    padding-left: 18px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -112,10 +109,14 @@ body {
     position: relative;
 }
 
-.stories div,a{
+
+.stories a{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 14px;
+    flex-direction: column;
+    position: relative;
 }
 
 .stories p{
@@ -123,6 +124,20 @@ body {
     font-weight: 400px;
     line-height: 14px;
     padding-top: 3px;
+}
+
+.stories img{
+    height: 66px;
+    width: 66px;
+}
+
+.stories .perfil-stories{
+    height: 56px;
+    width:56px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: calc((100% - 56px)/2);
 }
 
 .stories ion-icon{
@@ -134,31 +149,10 @@ body {
     top: 46px;
 }
 
-.story{
-    margin-left: 14px;
-    flex-direction: column;
-    position: relative;
-}
-
-.story:first-of-type{
-    margin-left: 18px;
-}
-
-.story img{
-    height: 66px;
-    width: 66px;
-}
-
-.story .perfil-stories{
-    height: 56px;
-    width:56px;
-    object-fit: cover;
-    border-radius: 50%;
-    position: absolute;
-}
-
 
 /* ------------------- Fim dos estilos dos stories ------------------ */
+
+
 
 /* ------------------- Início dos estilos das postagens ------------------ */
 
@@ -166,7 +160,7 @@ body {
     margin-bottom: 16px;
 }
 
-.post{
+.postagens>div{
     margin-top: 60px;
     width: 100%;
     background-color: #ffffff;
@@ -176,16 +170,50 @@ body {
     border: solid 1px #dbdbdb;
 }
 
-
-.post:first-of-type {
+.postagens>div:first-child {
     margin-top: 24px;
 }
 
-.post button{
+
+.postagens button{
     background-color: inherit;
     border:none;
     cursor:pointer;
 }
+
+.postagens strong{
+    font-weight: 500;
+    display: inline-block;
+}
+
+
+
+
+.cabecalho{ /* Topo de cada post*/
+    height: 61px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 17px; 
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho div{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho img{ /* Topo de cada post*/
+    height: 32px;
+    width: 32px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.cabecalho ion-icon{
+    font-size: 18px;
+}
+
 
 .midia-do-post{
     width: 100%;
@@ -203,89 +231,47 @@ body {
     object-fit: cover;
 }
 
-.post ion-icon{
-    font-size: 18px;
-}
 
-.post > div:first-child{ /* Topo de cada post*/
-    height: 61px;
-    justify-content: space-between;
+
+
+.rodape-post{
     width: 100%;
-    padding: 0px 17px; 
-    display: flex;
-    align-items: center;
+    padding: 8px 18px;
+    border-bottom: solid 1px #DBDBDB;
 }
 
-.post > div:first-child img{ /* Topo de cada post*/
-    height: 32px;
-    width: 32px;
-    margin-right: 15px;
-    border-radius: 50%;
-}
-
-.post p{
-    align-items: center;
-}
-
-.foto-e-perfil{
-    display: flex;
-    align-items: center;
-}
-
-.post ul{
-    width: 100%;
-    padding: 0px 18px;
-}
-
-.post li{
+.rodape-post li{
     margin-top: 8px;
     display: flex;
     align-items: center;
-}
-
-.post a{
-    display: inline-block;
-}
-
-.base-post li:first-of-type{
     justify-content: space-between;
-    margin-top: 12px;
-
 }
 
-.base-post div ion-icon{ /*Somente os ícones da esquerda - Que estão em uma div*/
+.rodape-post li div{
+    display: flex;
+    align-items: center;
+}
+
+.rodape-post ion-icon{
+    font-size: 14px; 
+}
+
+.rodape-post .icones-maiores ion-icon{
+    font-size: 18px;
+}
+
+.rodape-post .icones-maiores div ion-icon{
     margin-right: 18px;
 }
 
-.base-post img{
+.rodape-post img{
     height:20px;
     width: 20px;
     margin-right: 10px;
     border-radius: 50%;
 }
 
-.post strong{
-    font-weight: 500;
-    display: inline-block;
-}
-
-.comentarios{
-border-bottom: solid 1px #DBDBDB;
-}
-
-.comentarios li{
-    justify-content: space-between;
-}
-
-
-.comentarios li:last-child{
-    margin-bottom: 8px;
-}
-.comentarios ion-icon{
-    font-size: 14px; 
-}
-
-.post .adicionar-comentario{
+.adicionar-comentario{
     display: flex;
     justify-content: flex-start;
     height: 40px;
@@ -293,8 +279,10 @@ border-bottom: solid 1px #DBDBDB;
 }
 
 .adicionar-comentario ion-icon{
-    font-size: 32px;
-    color:#262626
+    font-size: 24px;
+    color:#262626;
+    margin-right:16px;
+    margin-left: 8px;
 }
 
 .adicionar-comentario input{
@@ -302,13 +290,13 @@ border-bottom: solid 1px #DBDBDB;
     border: none;
 }
 
-
 .adicionar-comentario .emojis:hover{
     filter:brightness(2);
 }
 
 .adicionar-comentario .publicar{
     color:#B2DFFC;
+    margin-right: 8px;
 }
 
 .adicionar-comentario .publicar:hover{
@@ -352,24 +340,19 @@ border-bottom: solid 1px #DBDBDB;
     cursor:pointer;
 }
 
-.sidebar a{
-    justify-content: left;
-}
-
-
-
-
-.sugestoes-para-usuario ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .sugestoes-para-usuario li {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 17px;
+    margin-top: 17px; 
+}
+
+
+
+.sugestoes-para-usuario li>div {
+display: flex;
+align-items: center;
 }
 
 
@@ -381,6 +364,23 @@ border-bottom: solid 1px #DBDBDB;
 }
 
 
+
+.copyrights{
+    margin-top: 33px;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 400;
+}
+
+.copyrights p{
+    margin-bottom: 18px;
+}
+
+
+
+/* ------------------- Fim dos estilos da lateral direita (Sidebar) ------------------ */
+
+/* ------------------- Definições de texto -----------------------------------*/
 
 .titulo{
     font-size: 14px;
@@ -405,25 +405,6 @@ border-bottom: solid 1px #DBDBDB;
     line-height: 14px;
     font-weight: 400;
 }
-
-/* Estilos dos textos da sidebar*/
-
-.copyrights{
-    margin-top: 33px;
-    font-size: 11px;
-    line-height: 13px;
-    font-weight: 400;
-}
-
-.copyrights p:first-of-type{
-    margin-bottom: 18px;
-}
-
-
-
-/* ------------------- Fim dos estilos da lateral direita (Sidebar) ------------------ */
-
-/* ------------------- Definições de cores de texto -----------------------------------*/
 
 .preto{
     color: #262626 !important;
@@ -450,6 +431,9 @@ border-bottom: solid 1px #DBDBDB;
     display: none;
 }
 
+
+
+
 /* -------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------- */
@@ -468,6 +452,10 @@ border-bottom: solid 1px #DBDBDB;
 
 
 @media (max-width: 935px) {
+
+    .topo-pagina{
+        padding: 7px 18px;
+    }
 
     .container{
         justify-content: center;
@@ -493,25 +481,22 @@ border-bottom: solid 1px #DBDBDB;
     .logo-desktop-e-topo-mobile{
         width:100%;
         justify-content: space-between;
-        padding: 0px 22px;
     }
 
     .icon-mobile{
         display: block;
     }
 
-    .barra-logos .barra-vertical,
-    .barra-logos .caixa-pesquisa,
-    .barra-logos .botoes-direita{
+    .topo-pagina .barra-vertical,
+    .topo-pagina .caixa-pesquisa,
+    .topo-pagina .botoes-direita{
         display:none;
     }
 
     .stories{
         margin-top: 54px;
-        padding-top: 18px;
         height:121px;
         background-color: inherit;
-        align-items: flex-start;
         border: none;
     }
 
@@ -519,8 +504,7 @@ border-bottom: solid 1px #DBDBDB;
         display: none;
     }
 
-
-    .post:first-of-type {
+    .postagens div:first-of-type {
         margin-top: 0px;
     }
 
